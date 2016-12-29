@@ -1,0 +1,19 @@
+{
+  "name": "created-at-converter",
+  "version": "1.0.0",
+  "description": "Convert data which has a \"created_at\" field into: 1) regularly spaced time intervals on for the x-axis 2) Cumulative total of how many data entries were created prior to a given point in time on the y-axis.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shenders13/created-at-data-converter.git"
+  },
+  "author": "Sam Henderson <hendersonsam456@gmail.com> (http://samhenderson.xyz)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shenders13/created-at-data-converter/issues"
+  },
+  "homepage": "https://github.com/shenders13/created-at-data-converter#readme"
+}

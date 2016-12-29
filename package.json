@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/shenders13/created-at-data-converter/issues"
   },
-  "homepage": "https://github.com/shenders13/created-at-data-converter#readme"
+  "homepage": "https://github.com/shenders13/created-at-data-converter#readme",
+  "dependencies": {
+    "moment": "^2.17.1"
+  }
 }

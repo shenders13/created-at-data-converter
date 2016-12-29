@@ -1,11 +1,5 @@
 var moment = require('moment')
 
-var data = [
-  { "id":1,"name":"Malik","created_at":"2016-06-15 12:17:25" },
-  { "id":2,"name":"Aliyah", "created_at":"2016-04-23 16:46:46"},
-  { "id":3,"name":"Sarah","created_at":"2016-10-29 13:15:41"}
-];
-
 var convertCreatedAt = function (data) {
   // create array of created_at values
   var createdAtValues = [];
@@ -43,4 +37,4 @@ var convertCreatedAt = function (data) {
   return {xVals: wordTimeArray, yVals: output};
 }
 
-console.log(convertCreatedAt(data))
+module.exports = convertCreatedAt;

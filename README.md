@@ -16,25 +16,33 @@ That is what the created-at-data-converter function does!
 
 ## Installation & use
 
-`npm install created-at-converter --save`
+`
+npm install created-at-converter --save
+`
 
 Import created-at-converter into your javascript file:
 
-`import converterFunction from 'created-at-converter'`
+`
+var converterFunction = require('created-at-converter')
+`
 
 You can then use the converterFunction:
 
-`cumulativeCreatedAtData = converterFunction(data)`
+`
+cumulativeCreatedAtData = converterFunction(data)
+`
 
 ## Input data format
 
 Input data must be an array of objects. Each object must have a created_at entry e.g.
 
-`var data = [
+`
+var data = [
   { "id":1,"name":"Malik","created_at":"2016-06-15 12:17:25" },
   { "id":2,"name":"Aliyah", "created_at":"2016-04-23 16:46:46"},
   { "id":3,"name":"Sarah","created_at":"2016-10-29 13:15:41"}
-];`
+];
+`
 
 ## Output data format
 
@@ -44,7 +52,12 @@ After calling cumulativeCreatedAtData like so
 
 Your output will look like:
 
-`{ xVals: [ 'Apr 23rd 16', 'Jul 27th 16', 'Oct 29th 16' ], yVals: [ 0, 2, 2 ] }`
+`
+{
+  xVals: [ 'Apr 23rd 16', 'Jul 27th 16', 'Oct 29th 16' ], 
+  yVals: [ 0, 2, 2 ] 
+ }
+`
 
 - The xVals are equally spaced time intervals going from the earliest created_at to the biggest created_at.
 - The yVals represent how many user accounts had been created at that point in time.

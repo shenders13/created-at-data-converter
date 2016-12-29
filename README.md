@@ -46,7 +46,7 @@ var data = [
 
 ## Output data format
 
-After calling cumulativeCreatedAtData like so
+After calling the converterFunction like so:
 
 `converterFunction(data)`
 

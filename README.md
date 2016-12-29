@@ -48,12 +48,12 @@ var data = [
 
 After calling the converterFunction like so:
 
-`converterFunction(data)`
+`outputData = converterFunction(data)`
 
 Your output will look like:
 
 `
-{
+outputData = {
   xVals: [ 'Apr 23rd 16', 'Jul 27th 16', 'Oct 29th 16' ], 
   yVals: [ 0, 2, 2 ] 
  }
@@ -62,5 +62,53 @@ Your output will look like:
 - The xVals are equally spaced time intervals going from the earliest created_at to the biggest created_at.
 - The yVals represent how many user accounts had been created at that point in time.
 
+
+## Use with Chart.js
+
+I built this package so I could send the output data straight into chart.js (http://www.chartjs.org/docs/).
+Insert the xVal and yVal data into the chart like so 
+
+`
+<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: outputData.xVal,
+        datasets: [{
+            label: '# of Votes',
+            data: outputData.yVal,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+`
 
 
